@@ -1,0 +1,52 @@
+# Project Feedback & Learning
+
+## Quality Score: 8/10
+
+Proyek ini menunjukkan implementasi end-to-end machine learning yang solid dengan skor model 0.94 yang sangat baik untuk kasus credit risk scoring. Semua validation gates terpenuhi termasuk dokumentasi lengkap dan publish-ready. Domain UMKM sangat relevan dengan konteks Indonesia dan memiliki nilai bisnis nyata. Pengurangan 2 poin karena belum terlihat penggunaan XGBoost sebagai pembanding, tidak ada deployment production-level, dan belum ada analisis fairness/bias yang krusial untuk model kredit.
+
+## ✅ Strengths
+
+- Skor model tinggi (0.94) menunjukkan kemampuan feature engineering dan model tuning yang baik
+- Domain UMKM relevan dan memiliki dampak bisnis nyata di pasar Indonesia
+- Semua validation gates terpenuhi termasuk dokumentasi lengkap
+- Pemilihan RandomForest tepat untuk interpretabilitas di domain keuangan
+- Pipeline classification end-to-end yang terstruktur dengan baik
+
+## ⚠️  Weaknesses
+
+- Tidak ada perbandingan eksplisit dengan XGBoost padahal ada di tech stack user
+- Belum ada analisis fairness dan bias detection yang wajib untuk model kredit
+- Tidak ada deployment atau serving layer (API/Streamlit app) yang disebutkan
+- Tidak ada analisis model interpretability mendalam seperti SHAP values
+- Belum ada strategi monitoring model drift untuk production use case
+
+## 🛠️  Skills Demonstrated
+
+- Binary/Multi-class Classification dengan Scikit-learn
+- Feature Engineering untuk data keuangan
+- Model evaluation dan validation pipeline
+- Dokumentasi proyek data science
+- Domain knowledge credit risk scoring
+- RandomForest hyperparameter tuning
+- Data validation dan quality checks
+
+## 📚 Skills Still to Show
+
+- Model deployment dengan FastAPI atau Flask sebagai REST API
+- Streamlit dashboard interaktif untuk visualisasi hasil prediksi
+- XGBoost dan LightGBM model comparison dan ensemble
+- SHAP / LIME untuk explainable AI
+- Time series forecasting atau sequential modeling
+- MLOps pipeline dengan MLflow atau DVC untuk experiment tracking
+- Deep learning dengan TensorFlow atau PyTorch
+- NLP dan text processing
+- Unsupervised learning seperti clustering dan anomaly detection
+- SQL dan database integration untuk data pipeline
+- A/B testing dan statistical hypothesis testing
+- Model fairness dan bias mitigation techniques
+
+## 🚀 Next Project Recommendations
+
+- **Customer Segmentation & Churn Prediction Dashboard untuk E-Commerce dengan Streamlit** (Intermediate): Melengkapi portfolio dengan unsupervised learning (clustering RFM), churn prediction sebagai supervised learning, dan yang terpenting menampilkan skill Streamlit yang ada di stack namun belum digunakan. Proyek ini juga menambahkan domain e-commerce yang berbeda dari fintech, memperluas daya tarik portfolio ke lebih banyak recruiter.
+- **Sentiment Analysis & Topic Modeling Ulasan Produk UMKM menggunakan NLP** (Intermediate-Advanced): Mengisi gap NLP yang signifikan di portfolio. Menggunakan IndoBERT atau transformers untuk analisis sentimen Bahasa Indonesia sangat relevan dan langka di pasar, sekaligus menunjukkan kemampuan text preprocessing, TF-IDF, dan deep learning dasar. Koneksi dengan domain UMKM dari proyek sebelumnya menciptakan narasi portfolio yang kohesif.
+- **Real-Time Fraud Detection System dengan XGBoost, FastAPI, dan MLflow Tracking** (Advanced): Proyek ini secara langsung mengisi tiga gap terbesar sekaligus: penggunaan XGBoost yang ada di stack, deployment production-ready dengan FastAPI, dan MLOps dengan MLflow untuk experiment tracking. Domain fraud detection adalah natural extension dari credit risk scoring dan sangat dicari di industri fintech. Menambahkan imbalanced learning techniques seperti SMOTE juga memperkuat skill handling real-world data challenges.

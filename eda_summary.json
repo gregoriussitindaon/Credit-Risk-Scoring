@@ -1,0 +1,168 @@
+{
+  "shape": [
+    1000,
+    9
+  ],
+  "describe": {
+    "feature_1": {
+      "count": 1000.0,
+      "mean": -0.0003951763683417546,
+      "std": 1.593843354226967,
+      "min": -5.814203319975748,
+      "25%": -1.0871633650784176,
+      "50%": 0.0506476633056841,
+      "75%": 1.0660252349046586,
+      "max": 4.605668632162393
+    },
+    "feature_2": {
+      "count": 1000.0,
+      "mean": -0.49338627829452364,
+      "std": 1.4970913183263126,
+      "min": -3.922470597395144,
+      "25%": -1.4765032929148079,
+      "50%": -0.756922908175137,
+      "75%": 0.13722718902402753,
+      "max": 5.685693349562584
+    },
+    "feature_3": {
+      "count": 1000.0,
+      "mean": -0.041315123329953705,
+      "std": 1.0337999882996762,
+      "min": -3.582062607487511,
+      "25%": -0.7232994096008613,
+      "50%": -0.0276516150549101,
+      "75%": 0.6200971939386182,
+      "max": 3.2401391486368074
+    },
+    "feature_4": {
+      "count": 1000.0,
+      "mean": 0.6295762591464513,
+      "std": 2.760589724344744,
+      "min": -8.102613787399028,
+      "25%": -0.9559207544721989,
+      "50%": 0.9977066761454698,
+      "75%": 2.342721215327077,
+      "max": 7.933944231809447
+    },
+    "feature_5": {
+      "count": 1000.0,
+      "mean": 0.4717954279213548,
+      "std": 1.5574383895627286,
+      "min": -4.661167604779565,
+      "25%": -0.5143672876700027,
+      "50%": 0.5826536179194955,
+      "75%": 1.4939111716405558,
+      "max": 5.066061280449542
+    },
+    "feature_6": {
+      "count": 1000.0,
+      "mean": 0.4474667447662386,
+      "std": 1.9903712236106168,
+      "min": -7.298062797917486,
+      "25%": -0.7707400965345247,
+      "50%": 0.5388809567586981,
+      "75%": 1.7067453101524455,
+      "max": 7.456969913096969
+    },
+    "feature_7": {
+      "count": 1000.0,
+      "mean": 0.49306049476257824,
+      "std": 1.5987082566976039,
+      "min": -4.34147718695851,
+      "25%": -0.6502713798168045,
+      "50%": 0.448904876419268,
+      "75%": 1.487736427404601,
+      "max": 5.608411850136866
+    },
+    "feature_8": {
+      "count": 1000.0,
+      "mean": 0.47649424505463356,
+      "std": 1.4685456341810943,
+      "min": -3.8892841897956414,
+      "25%": -0.5727679081460171,
+      "50%": 0.5567041357426554,
+      "75%": 1.4239668946765969,
+      "max": 6.036792892920811
+    },
+    "target": {
+      "count": 1000.0,
+      "mean": 0.502,
+      "std": 0.5002461856388775,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 1.0,
+      "75%": 1.0,
+      "max": 1.0
+    }
+  },
+  "dtypes": {
+    "feature_1": "float64",
+    "feature_2": "float64",
+    "feature_3": "float64",
+    "feature_4": "float64",
+    "feature_5": "float64",
+    "feature_6": "float64",
+    "feature_7": "float64",
+    "feature_8": "float64",
+    "target": "int64"
+  },
+  "top_correlations": [
+    {
+      "var1": "feature_2",
+      "var2": "feature_4",
+      "correlation": -0.678
+    },
+    {
+      "var1": "feature_1",
+      "var2": "feature_4",
+      "correlation": -0.668
+    },
+    {
+      "var1": "feature_4",
+      "var2": "feature_7",
+      "correlation": -0.611
+    },
+    {
+      "var1": "feature_2",
+      "var2": "feature_6",
+      "correlation": 0.552
+    },
+    {
+      "var1": "feature_6",
+      "var2": "feature_7",
+      "correlation": 0.513
+    }
+  ],
+  "key_observations": [
+    "Dataset terdiri dari 1000 baris dan 9 kolom (8 fitur numerik + 1 target biner), ukuran yang relatif kecil untuk model kredit scoring yang robust di konteks UMKM.",
+    "Target variabel memiliki distribusi yang hampir perfectly balanced (mean=0.502, std\u22480.5), artinya sekitar 502 sampel berlabel 1 dan 498 berlabel 0 \u2014 kondisi ideal untuk klasifikasi biner tanpa perlu teknik resampling khusus.",
+    "Semua fitur bertipe float64 dan tampak sudah dalam skala yang relatif terstandardisasi (mean mendekati 0 untuk beberapa fitur), mengindikasikan kemungkinan data sudah melalui preprocessing atau normalisasi sebelumnya.",
+    "Feature_4 memiliki standar deviasi tertinggi (std=2.76) dan mean tertinggi (0.63), menunjukkan variabilitas dan spread data yang jauh lebih besar dibanding fitur lain \u2014 kemungkinan mengandung outlier signifikan atau distribusi yang lebih lebar.",
+    "Nama fitur yang generik ('feature_1' hingga 'feature_8') mengindikasikan data telah dianonimisasi atau di-encode, sehingga interpretabilitas bisnis dan transparansi model (explainability) akan menjadi tantangan utama dalam konteks kredit scoring UMKM yang memerlukan justifikasi keputusan."
+  ],
+  "potential_issues": [
+    "Kurangnya konteks semantik fitur: nama kolom yang tidak deskriptif ('feature_1' dst.) menyulitkan validasi domain knowledge, padahal dalam credit scoring UMKM faktor seperti arus kas, lama usaha, atau omzet sangat krusial untuk interpretasi dan regulasi (POJK/OJK compliance).",
+    "Ukuran dataset 1000 sampel sangat kecil untuk membangun model kredit scoring yang generalizable \u2014 risiko overfitting tinggi, terutama untuk model kompleks seperti ensemble atau deep learning, dan performa evaluasi bisa tidak stabil.",
+    "Tidak ada informasi missing values yang eksplisit, namun perlu diverifikasi lebih lanjut karena data UMKM unbanked seringkali memiliki banyak nilai kosong pada fitur finansial formal.",
+    "Feature_4 dengan std=2.76 berpotensi mendominasi model berbasis jarak atau gradient jika tidak dilakukan scaling ulang, dan kemungkinan mengandung outlier ekstrem yang dapat mendistorsi pembelajaran model.",
+    "Tidak ada fitur temporal atau fitur kategorik yang terlihat, padahal perilaku pembayaran historis dan segmentasi industri UMKM adalah prediktor penting risiko kredit \u2014 dataset mungkin tidak merepresentasikan kompleksitas masalah nyata."
+  ],
+  "recommendations_for_modeling": [
+    "Lakukan feature importance analysis (menggunakan Random Forest, XGBoost, atau SHAP values) sejak awal untuk mengidentifikasi fitur mana yang paling prediktif, mengingat nama fitur tidak informatif dan perlu diprioritaskan untuk interpretasi bisnis.",
+    "Gunakan stratified k-fold cross-validation (k=5 atau 10) mengingat dataset kecil (1000 sampel) untuk mendapatkan estimasi performa yang lebih stabil dan menghindari variance tinggi pada split tunggal.",
+    "Terapkan pipeline scaling (StandardScaler atau RobustScaler) terutama untuk feature_4 yang memiliki spread tinggi, dengan RobustScaler lebih disarankan jika terdapat outlier ekstrem.",
+    "Prioritaskan model yang interpretable dan explainable seperti Logistic Regression dengan regularisasi, Decision Tree, atau XGBoost dengan SHAP \u2014 mengingat kebutuhan transparansi dalam keputusan kredit dan potensi audit regulasi OJK.",
+    "Evaluasi model menggunakan metrik yang relevan untuk kredit scoring: AUC-ROC sebagai metrik utama, ditambah Precision-Recall curve, KS-Statistic, dan Gini Coefficient \u2014 hindari hanya mengandalkan accuracy mengingat implikasi bisnis asimetris antara false positive (kredit ditolak padahal layak) dan false negative (kredit diberikan ke peminjam berisiko tinggi)."
+  ],
+  "interesting_patterns": [
+    "Distribusi target yang hampir sempurna balanced (50.2% vs 49.8%) sangat tidak umum dalam dataset kredit nyata \u2014 dalam praktik NPL rate UMKM biasanya 5-20%, sehingga ini mengindikasikan dataset kemungkinan adalah synthetic data atau telah di-resample secara artifisial, yang perlu dikonfirmasi sebelum deployment.",
+    "Feature_1 dan feature_3 memiliki mean yang sangat mendekati nol (-0.0004 dan -0.041) dengan std sekitar 1.0-1.6, pola ini sangat menyerupai distribusi normal terstandardisasi (z-score), mengindikasikan fitur-fitur ini kemungkinan sudah melalui standardisasi sebelum diberikan.",
+    "Terdapat pola asimetri mean yang menarik: feature_2 memiliki mean negatif (-0.493) sementara feature_4, feature_5, feature_6, feature_7, feature_8 semuanya memiliki mean positif (0.47-0.63) \u2014 kemungkinan feature_2 merepresentasikan faktor risiko negatif (seperti rasio hutang atau riwayat gagal bayar) sedangkan fitur lain merepresentasikan faktor positif.",
+    "Cluster std values menunjukkan dua kelompok fitur: kelompok dengan volatilitas rendah-sedang (feature_2, feature_3, feature_5, feature_8 dengan std 1.0-1.6) dan kelompok dengan volatilitas tinggi (feature_1, feature_6, feature_7 dengan std 1.6-2.0, dan feature_4 sebagai outlier dengan std 2.76) \u2014 perbedaan ini bisa mencerminkan perbedaan jenis data asli (misalnya rasio keuangan vs nilai absolut transaksi).",
+    "Dengan hanya 8 fitur untuk menilai kelayakan kredit UMKM, dataset ini tampak sangat tereduksi dimensinya \u2014 kemungkinan fitur-fitur ini adalah hasil PCA atau feature engineering dari data mentah yang lebih kaya, yang berarti model downstream perlu mempertimbangkan bahwa informasi asli mungkin sudah terkompres dan sebagian informasi bisa hilang."
+  ],
+  "figures_generated": [
+    "correlation.png",
+    "distributions.png"
+  ]
+}

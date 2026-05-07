@@ -1,0 +1,28 @@
+{
+  "project_type": "classification",
+  "target_column": "target",
+  "models_trained": [
+    "LogisticRegression",
+    "RandomForest",
+    "GradientBoosting"
+  ],
+  "results": {
+    "LogisticRegression": {
+      "accuracy": 0.785,
+      "f1_weighted": 0.785,
+      "roc_auc": null
+    },
+    "RandomForest": {
+      "accuracy": 0.94,
+      "f1_weighted": 0.94,
+      "roc_auc": null
+    },
+    "GradientBoosting": {
+      "accuracy": 0.915,
+      "f1_weighted": 0.915,
+      "roc_auc": null
+    }
+  },
+  "best_model": "RandomForest",
+  "best_score": 0.94
+}
