@@ -1,0 +1,18 @@
+{
+  "title": "AI-Powered Credit Risk Scoring untuk Pinjaman UMKM",
+  "slug": "ai_credit_risk_scoring_umkm",
+  "tagline": "Membangun sistem AI credit scoring yang transparan dan akurat untuk membuka akses pembiayaan UMKM Indonesia secara lebih adil dan efisien.",
+  "tags": [
+    "classification",
+    "scikit-learn",
+    "xgboost",
+    "lightgbm"
+  ],
+  "summary": "Proyek ini membangun sistem AI Credit Risk Scoring berbasis Random Forest untuk menilai kelayakan kredit pelaku UMKM Indonesia yang mayoritas tidak memiliki riwayat kredit formal. Menggunakan dataset 1.000 sampel dengan distribusi kelas yang seimbang sempurna, model Random Forest berhasil mencapai akurasi dan F1-Score sebesar 94%, melampaui Gradient Boosting (91.5%) dan Logistic Regression (78.5%). Sistem ini dirancang transparan dan dapat diinterpretasi, sehingga mendukung kebutuhan audit lembaga keuangan sekaligus membuka akses pembiayaan yang lebih adil dan efisien bagi UMKM potensial di Indonesia.",
+  "github_url": "",
+  "demo_url": "",
+  "best_model": "RandomForest",
+  "best_score": 0.94,
+  "created_at": "2026-05-05T13:17:31.107046",
+  "thumbnail": "reports/figures/distributions.png"
+}
